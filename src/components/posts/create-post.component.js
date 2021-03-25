@@ -29,7 +29,7 @@ class CreatePost extends Component {
             description: this.state.description,
         }
 
-        axios.post('http://localhost:5000/posts/create/', health)
+        axios.post('https://eager-newton-86421f.netlify.app/posts/create/', health)
             .then(res => window.location = "/posts")
             .catch(err => console.log('Error :' + err));
     }
