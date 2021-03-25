@@ -20,7 +20,7 @@ class CreatePost extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://hgc-intranet.netlify.app/posts/' + this.props.match.params.id)
+        axios.get('http://localhost:5000/posts/' + this.props.match.params.id)
             .then(res => {
                 this.setState({
                     title: res.data.title,
@@ -46,7 +46,7 @@ class CreatePost extends Component {
             description: this.state.description, 
         }
 
-        axios.post('https://hgc-intranet.netlify.app/posts/update/' + this.props.match.params.id, post)
+        axios.post('http://localhost:5000/posts/update/' + this.props.match.params.id, post)
             .then(res => window.location = "/posts")
             .catch(err => console.log('Error :' + err));
     }

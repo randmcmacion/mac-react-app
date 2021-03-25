@@ -26,7 +26,7 @@ export default class AllPosts extends Component {
 
     componentDidMount(){
 
-        axios.get('https://hgc-intranet.netlify.app/posts/')
+        axios.get('http://localhost:5000/posts/')
             .then(res => {
                 this.setState({post: res.data})
             })
@@ -38,7 +38,7 @@ export default class AllPosts extends Component {
     }
 
     delete_post(id){
-        axios.delete('https://hgc-intranet.netlify.app/posts/'+id)
+        axios.delete('http://localhost:5000/posts/'+id)
             .then(res => console.log(res.data))
             this.setState({
                 post: this.state.post.filter(el => el._id !== id)
