@@ -17,7 +17,7 @@ class Navbar extends Component {
         return (
             <MDBNavbar color="unique-color-dark" dark expand="md">
                 <MDBNavbarBrand>
-                    <strong className="white-text">HGC Dashboard</strong>
+                    <strong className="white-text">HGC Intranet Site</strong>
                 </MDBNavbarBrand>
                 <MDBNavbarToggler onClick={this.toggleCollapse} />
                 <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
