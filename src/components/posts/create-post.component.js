@@ -29,7 +29,7 @@ class CreatePost extends Component {
             description: this.state.description,
         }
 
-        axios.post('http://localhost:5000/posts/create/', health)
+        axios.post('https://hgc-intranet-backend.herokuapp.com/posts/create/', health)
             .then(res => window.location = "/posts")
             .catch(err => console.log('Error :' + err));
     }
