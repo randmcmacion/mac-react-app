@@ -47,7 +47,7 @@ class CreatePost extends Component {
         }
 
         axios.post('https://hgc-intranet-backend.herokuapp.com/posts/update/' + this.props.match.params.id, post)
-            .then(res => window.location = "/posts")
+            .then(res => window.location = "/posts/")
             .catch(err => console.log('Error :' + err));
     }
 
